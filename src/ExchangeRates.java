@@ -15,7 +15,7 @@ public class ExchangeRates {
 
     public static void main(String[] args) throws IOException {
 
-// Скачиваем исходной страницы API Центробанка.
+// Скачиваем содержимое исходной страницы API Центробанка.
         String originalPage = downloadWebPage("https://cbr.ru/scripts/XML_dynamic.asp?date_req1=12/11/2021&date_req2=12/11/2021&VAL_NM_RQ=R01235");
 // Задаём адрес исходной страницы API Центробанка в текстовом формате.
         String originalPageText = "https://cbr.ru/scripts/XML_dynamic.asp?date_req1=12/11/2021&date_req2=12/11/2021&VAL_NM_RQ=R01235";
