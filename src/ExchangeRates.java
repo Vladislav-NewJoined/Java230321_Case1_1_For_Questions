@@ -54,11 +54,11 @@ public class ExchangeRates {
         double min = minDifference(listCourses);
         DecimalFormat df = new DecimalFormat("0.000");
         df.setRoundingMode(RoundingMode.DOWN);
-        System.out.println("\nЗа указанный месяц курс максимально вырос между двумя соседними датами на величину: " + df.format(max));
-        System.out.println("За указанный месяц курс максимально упал между двумя соседними датами на величину: " + df.format(min));
+        System.out.println("\nМаксимальный рост между двумя соседними элементами: " + df.format(max));
+        System.out.println("Максимальное снижение между двумя соседними элементами: " + df.format(min));
     }
 
-    //Пишем классы для поиска максимальных перепадов курса.
+//Пишем классы для поиска максимальных перепадов курса.
 //Сначала максимальную разницу находим.
     public static double maxDifference(List<Double> listCourses) {
         if (listCourses == null || listCourses.size() == 0) {
@@ -87,7 +87,7 @@ public class ExchangeRates {
         return max;
     }
 
-    //Теперь минимальную разницу находим.
+//Теперь минимальную разницу находим.
     public static double minDifference(List<Double> listCourses) {
         if (listCourses == null || listCourses.size() == 0) {
             return Double.MIN_VALUE;
